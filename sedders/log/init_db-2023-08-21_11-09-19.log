@@ -1,0 +1,8 @@
+--- Inicio proceso setup_db.sh ---
+
+* Creando tablas
+    - Tabla: admin_user
+
+* Creando usuario admin
+
+--- Fin proceso setup_db.sh ---

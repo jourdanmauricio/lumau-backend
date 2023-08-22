@@ -1,0 +1,20 @@
+# For documentation on how to configure this file,
+# see diesel.rs/guides/configuring-diesel-cli
+
+[print_schema]
+# Donde se generarn los esquemas de BD
+file = "src/schema.rs"
+# * with_docs= 
+# true -> coloca un comentario de documento en todas las tablas y columnas.
+# * filter =
+# Este campo especifica qué tablas deben ser generadas por diesel print-schema.  Su valor debería ser un mapa con una de esas dos claves. (only_tables) 
+# This will cause only the users and posts tables to be output y except_tables.
+# filter = { only_tables = ["users", "posts"] }
+# This will cause all tables *except* the comments table to be output
+# filter = { except_tables = ["comments"] }
+generate_missing_sql_type_definitions = false
+# skip generating missing sql type definitions
+custom_type_derives = ["diesel::sql_types::SqlType", "std::fmt::Debug"]
+# Derive `SqlType` and `Debug` for the automatically generated sql type definitions
+# import_types = ["diesel::sql_types::*", "diesel_full_text_search::types::*"]
+# Add types from `diesel_full_text_search` like `tsvector`
